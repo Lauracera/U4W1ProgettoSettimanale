@@ -1,39 +1,33 @@
 package it.epicode.Audio;
 
-import it.epicode.ElementoMultimediale;
+import it.epicode.Multimedia.ElementoMultimediale;
 
 public class Audio extends ElementoMultimediale {
-    public String titleAudio;
-    public int duration;
-    public int volume = 0;
 
-    public Audio(String title, int duration, int volume){
-        this.titleAudio = title;
-        this.duration = duration;
-        this.volume = volume;
+    public Audio(String title, int duration, int volume) {
+        super(title, duration, volume);
+    }
+
+    @Override
+    public void funzioneAudio(){
+        super.funzioneAudio();
+    }
+
+    @Override
+    public void funzioneVolume(){
+        super.funzioneVolume();
+    }
+
+    @Override
+    public int aumentaVolume()  {
+        return super.aumentaVolume();
     }
 
     public int abbassaVolume(){
-       if(volume > 0){
-            this.volume = volume -1;
-       }
-       return this.volume;
-    }
-
-    public int alzaVolume(){
-        this.volume = volume +1;
-        return this.volume;
+        return super.abbassaVolume();
     }
 
 
-
-   public String play(){
-        for( int i = 0; i< this.volume; i++){
-            this.titleAudio += "!" ;
-        }
-        return this.titleAudio;
-
-
-   }
 }
+
 
